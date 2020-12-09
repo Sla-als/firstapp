@@ -44,10 +44,14 @@ public class Product extends HttpServlet {
         }
         //
         if (!(id == 0 && title == null && cost == 0)) {
+
             //http://localhost:8080/jee/cart?id=19&title=Aaa&cost=100
+
             out.println("<html><body>" + "<h1>" + String.format("%d , %s , %d", id, title, cost) + "</h1>" + "</body></html>");
         } else {
+
             //http://localhost:8080/jee/cart?id=0&cost=0 -- если не добавляем товар, то отображается текущая карзина
+
             out.println("<html><body>" + "<h1>" +
                     productList + "</h1>" + "</body></html>");
         }
